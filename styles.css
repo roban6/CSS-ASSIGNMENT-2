@@ -1,0 +1,324 @@
+
+
+/* -------------------------------
+   FONT IMPORTS
+   ------------------------------- */
+
+/* Local font (for headings) */
+@font-face {
+    font-family: "MontserratLocal";
+    src: url("fonts/Montserrat-Bold.woff2") format("woff2"),
+         url("fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+/* -------------------------------
+   GLOBAL STYLES
+   ------------------------------- */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* base font size for easy rem scaling */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* external font */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    letter-spacing: 0.2px;
+}
+
+/* Headings use locally hosted font */
+h1, h2, h3 {
+    font-family: "MontserratLocal", sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+    color: #222;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #0077b6;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #023e8a;
+}
+
+/* -------------------------------
+   HEADER & NAVIGATION
+   ------------------------------- */
+
+header {
+    background: #222;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #90e0ef;
+}
+
+/* -------------------------------
+   HERO SECTION
+   ------------------------------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #90e0ef, #caf0f8);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 1rem;
+}
+
+.hero-image img {
+    margin-top: 2rem;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 4px solid #0077b6;
+}
+
+/* -------------------------------
+   SKILLS SECTION
+   ------------------------------- */
+
+.skills-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background: #f1f1f1;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* -------------------------------
+   PROJECTS SECTION
+   ------------------------------- */
+
+.projects-section {
+    padding: 4rem 2rem;
+    background: #e9f5ff;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.tech-tags span {
+    display: inline-block;
+    background: #0077b6;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* -------------------------------
+   CONTACT SECTION
+   ------------------------------- */
+
+.contact-section {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #023e8a;
+}
+
+/* Social links */
+.social-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f1f1;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.social-link:hover {
+    background: #90e0ef;
+}
+
+/* -------------------------------
+   FOOTER
+   ------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN
+   ------------------------------- */
+
+/* Medium screens */
+@media (min-width: 600px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
